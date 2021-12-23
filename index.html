@@ -7,6 +7,14 @@
     <link rel="stylesheet" href="style.css">
     <script src="https://kit.fontawesome.com/a076d05399.js"></script>
      <link rel="icon" type="image/x-icon" href="Images/favicon.png">
+     <style>
+        #blink {
+            font-size: 20px;
+            font-weight: bold;
+            color: #2d38be;
+            transition: 0.5s;
+        }
+    </style>
   </head>
   <body id="page-top" >
     <nav>
@@ -29,7 +37,13 @@
         <header class="masthead " style=" background-image: url('Images/bg1.jpg');">
             <div class="container d-flex align-items-center flex-column">
                 <!-- Masthead Avatar Image-->
-              <blink>Welcome to my Website</blink>
+              <p id="blink"> Welcome to my Website </p>
+    <script type="text/javascript">
+        var blink = document.getElementById('blink');
+        setInterval(function() {
+            blink.style.opacity = (blink.style.opacity == 0 ? 1 : 0);
+        }, 1500);
+    </script>
                 <img class="masthead-avatar mb-5" src="Images/brp.jpg" alt="..." />
                 <!-- Masthead Heading-->
                 <h1 class="masthead-heading text-uppercase mb-0">SANDESH TIWARI</h1>
